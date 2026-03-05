@@ -1,4 +1,3 @@
-# Atividade-Dont-3e
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,27 +6,43 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="bnt">butao</button>
-    <input id="idade">
-    <p id="verificar">resultado</p>
-    
+    <button id= "bnt">calcular</button>
+    <p id="resultado">resultado</p>
+    <input id="n1">
+    <input id="n2">
 
-    <script>
-        let butao = document.getElementById("bnt");
-        let idade = document.getElementById("idade");
-        let resultado = document.getElementById("verificar")
-       
-        
-        butao.addEventListener("click",function(){
-           let idadeNumero = Number(idade.value)
-           if(idadeNumero >= 18){
-           resultado.innerText = "Entrada permitida"
-           resultado.style.color = "green"
-           }else{
-           resultado.innerText = "Entrada proibida"
-           resultado.style.color = "red"
-           }
-        })
-    </script>
+    <select  id="operacao">
+     <option value="+">+</option>
+      <option value="-">-</option>
+       <option value="*">*</option>
+         <option value="/">/</option>
+    </select>
+
+     <script>
+
+      let butao = document.getElementById("bnt");
+       let resultado =document.getElementById("resultado");
+        let numero1 = document.getElementById("n1");
+         let numero2 = document.getElementById("n2");
+          let operacao = document.getElementById("operacao");
+         
+             butao.addEventListener("click", function(){
+               let n1 = Number(numero1.value);
+              let n2 = Number(numero2.value);
+             let opc = operacao.value;
+            let res;
+            let res;
+             if (op === "+") {
+                 res = n1 + n2;
+                  } else if (op === "-") {
+                       res = n1 - n2;
+                   } else if (op === "*") {
+                 res = n1 * n2;
+                   } else if (op === "/") {
+                         res = n1 / n2;
+                            }
+                 resultado.innerText = res;
+                  })
+     </script>
 </body>
 </html>
