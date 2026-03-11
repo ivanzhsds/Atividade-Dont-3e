@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="number" id="numero">
+   <label for="numero">Digite um número</label>
+    <p id="resultado"></p>
+    <button id="btnTabuada">Mostra tabuada</button>
+
+    <script>
+      let btn = document.getElementById("btnTabuada");
+      let resultado = document.getElementById("resultado")
+      
+      btn.addEventListener("click", function(){
+      let numero = Number(document.getElementById("numero").value);
+      let contador = 1;
+        resultado.innerHTML = "";
+        while(contador <= 10 ){
+              resultado.innerHTML += `${numero} x ${contador} = ${numero * contador} <br>`;
+              contador++;
+        }
+      }
+
+
+      ) 
+    </script>
+</body>
+</html>
