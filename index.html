@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nota1">Digite a primeira nota</label>
+    <input type="number" id="nota1">
+
+    <label for="nota2">Digite a segunda nota</label>
+    <input type="number" id="nota2">
+   
+    <label for="nota3">Digite a terceira nota</label>
+    <input type="number" id="nota3">
+
+    <p id="resultado"></p>
+    <button id="btnCalcular">Calcular médias</button>
+
+    <script>
+      let btn = document.getElementById("btnCalcular");
+      let resultado = document.getElementById("resultado")
+    
+      btn.addEventListener("click", function(){
+      let nota1 = Number(document.getElementById("nota1").value);
+      let nota2 = Number(document.getElementById("nota2").value);
+      let nota3 = Number(document.getElementById("nota3").value);
+
+         let media = (nota1 +nota2 +nota3)/3
+         if(media >= 7){
+            if(media >= 7){
+             resultado.innerText = `A média foi ${media} - Aprovado`
+        }
+         }else if(media >= 5 && media <7){
+             resultado.innerText = `A média foi ${media} - Reculperação`
+    
+         }else if(media <5){
+             resultado.innerText = `A média foi ${media} - Reprovado`
+         }
+              
+        
+        }
+      
+
+
+      ) 
+    </script>
+</body>
+</html>
