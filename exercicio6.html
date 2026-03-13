@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 
+    <input id="numero" placeholder="Digite um número:">
+    <button onclick="contar"()>contar</button>
+    <p id="resultado"></p>
+    <script>
+       function contar(){
+        let numero = document.getElementById("numero");
+        let resultado = document.getElementById("resultado");
+         
+          resultado.innerHTML = "";
+          for(let i = 1; i <= numero ; i++){
+            resultado.innerHTML += i +" ";
+          }
+       }
+    </script>
+</body>
+</html>
