@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Login</title>
+</head>
+<body>
+
+<input id="usuario" placeholder="Usuário">
+<input id="senha" placeholder="Senha">
+<button onclick="login()">Entrar</button>
+
+<p id="resultado"></p>
+
+<script>
+
+let tentativas = 0;
+
+function login(){
+
+    let usuario = document.getElementById("usuario").value;
+    let senha = document.getElementById("senha").value;
+    let resultado = document.getElementById("resultado");
+
+    if(usuario === "admin" && senha === "1234"){
+        resultado.innerHTML = "Login realizado com sucesso!";
+        return;
+    }
+
+    tentativas++;
+
+    if(tentativas === 3){
+        resultado.innerHTML = "Acesso bloqueado.";
+        return;
+    }
+
+    resultado.innerHTML = "Usuário ou senha incorretos. Tentativa " + tentativas;
+
+}
+
+</script>
+
+</body>
+</html>

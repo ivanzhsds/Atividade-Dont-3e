@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Contador de Positivos</title>
+</head>
+<body>
+
+<input id="numero" placeholder="Digite um número">
+<button onclick="verificar()">Enviar</button>
+
+<p id="resultado">Positivos: 0</p>
+
+<script>
+
+let contador = 0;
+let positivos = 0;
+
+function verificar(){
+
+    let numero = Number(document.getElementById("numero").value);
+    let resultado = document.getElementById("resultado");
+
+    contador++;
+
+    if(numero > 0){
+        positivos++;
+    }
+
+    if(contador === 5){
+        resultado.innerHTML = "Quantidade de números positivos: " + positivos;
+        return;
+    }
+
+    resultado.innerHTML = "Digite o próximo número";
+
+    document.getElementById("numero").value = "";
+}
+
+</script>
+
+</body>
+</html>

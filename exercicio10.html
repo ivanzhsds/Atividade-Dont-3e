@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Fatorial</title>
+</head>
+<body>
+
+<input id="numero" placeholder="Digite um número">
+<button onclick="calcular()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+
+function calcular(){
+
+    let numero = Number(document.getElementById("numero").value);
+    let resultado = document.getElementById("resultado");
+
+    let fatorial = 1;
+
+    for(let i = 1; i <= numero; i++){
+        fatorial *= i;
+    }
+
+    resultado.innerHTML = "Fatorial de " + numero + " é: " + fatorial;
+
+}
+
+</script>
+
+</body>
+</html>
